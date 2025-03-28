@@ -1,0 +1,40 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "year": 1925,
+      "isbn": "9780743273565",
+      "available": true
+    },
+    {
+      "id": "a0d7",
+      "title": "sofia the first",
+      "author": "abby",
+      "year": "2004",
+      "available": true
+    },
+    {
+      "id": "f88d",
+      "title": "sofia the first",
+      "author": "abby",
+      "year": "2004",
+      "available": true
+    },
+    {
+      "id": "323d",
+      "title": "mickey mouse",
+      "author": "fay",
+      "year": "2",
+      "available": true
+    },
+    {
+      "id": "297d",
+      "title": "the pearl",
+      "author": "kevin",
+      "year": "2004",
+      "available": true
+    }
+  ]
+}

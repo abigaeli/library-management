@@ -1,0 +1,213 @@
+:root {
+  --primary: #3498db;
+  --primary-dark: #2980b9;
+  --edit-green: #28a745;
+  --edit-green-dark: #218838;
+  --edit-green-darker: #1e7e34;
+  --delete-red: #dc3545;
+  --delete-red-dark: #c82333;
+  --delete-red-darker: #bd2130;
+  --text-dark: #2c3e50;
+  --text-medium: #34495e;
+  --text-light: #7f8c8d;
+  --bg-light: #87CEEB; /* Sky blue */
+  --card-bg: #FFFFFF; /* White cards */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-medium);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+  background-color: var(--card-bg);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  padding: 1.25rem;
+  color: black;
+}
+
+.card-header h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.book-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.book-info {
+  flex-grow: 1;
+}
+
+.book-title {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.book-author {
+  color: var(--text-medium);
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-year {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.availability {
+  color: var(--edit-green);
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 80px;
+  text-align: center;
+}
+
+.btn-borrow {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-edit {
+  background-color: var(--edit-green);
+  color: white;
+}
+
+.btn-delete {
+  background-color: var(--delete-red);
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-borrow:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-edit:hover {
+  background-color: var(--edit-green-dark);
+}
+
+.btn-delete:hover {
+  background-color: var(--delete-red-dark);
+}
+
+#book-form {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 768px) {
+  .book-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .action-buttons {
+      margin-top: 1rem;
+      margin-left: 0;
+      width: 100%;
+      justify-content: flex-end;
+  }
+  
+  .btn {
+      flex: 1;
+  }
+}
